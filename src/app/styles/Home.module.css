@@ -1,0 +1,36 @@
+.container{
+    max-height: 100%;
+    max-width: 100%;
+    margin: auto;
+}
+
+.elementos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+
+}
+
+.cards {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+  }
+
+  .card-hover {
+    transform: rotate(-20deg);
+    transition: transform 0.3s ease;
+  }
+  
+  .card-hover:hover {
+    transform: rotate(0);
+  }
+
+
+  .social{
+    margin-top: 20px;
+  }

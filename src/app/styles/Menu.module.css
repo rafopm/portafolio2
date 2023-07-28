@@ -1,0 +1,245 @@
+.menu {
+    user-select: none;
+  
+    height: 60px;
+  
+    display: flex;
+    justify-content: space-between;
+  
+    -webkit-transition: all 0.1s ease;
+    -moz-transition: all 0.1s ease;
+    -o-transition: all 0.1s ease;
+    transition: all 0.1s ease;
+    background-color: var(--color-background-dark);
+    z-index: 11;
+  
+    font-size: 30px;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+  }
+  
+  .menuItems {
+    width: 85%;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 30px;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .menuLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--color-text-ligth);
+  
+  }
+  
+  .activeLink {
+    color: red;
+  }
+  
+  .darkModeButton {
+    width: 15%;
+    list-style: none;
+    position: relative;
+    text-align: center;
+    font-size: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .icon {
+    font-size: 30px;
+    margin-left: 10px;
+    color: var(--color-text-ligth);
+  }
+  
+  .menuText {
+    display: none;
+  }
+  
+  .logoContainer {
+    width: 25%;
+    display: none;
+    margin-left: 0px;
+  }
+  
+  .iconDarkLigth {
+    color: rgb(255, 221, 0);
+    font-size: 25px;
+  }
+  
+  .iconDark {
+  }
+  
+  .menu hr {
+    height: 100vh;
+    width: 0.1vw;
+    border-width: 0;
+    color: var(--color-text-ligth);
+    background-color: var(--color-text-ligth);
+  }
+  
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .menuLink {
+      justify-content: flex-start;
+    }
+  
+    .icon {
+      display: none;
+    }
+  
+    .menu hr {
+      display: none;
+    }
+    .menuText {
+      display: inline;
+    }
+  
+    .menu {
+      
+      top: 0px;
+      justify-content: left;
+    }
+  
+    .logoContainer {
+      width: 200px;
+      display: flex;
+      justify-content: left;
+      padding-left: 20px;
+      flex-wrap: wrap;
+      align-content: center;
+    }
+  
+    .menuItems{
+      width: 60%;
+      font-size: 25px;
+    }
+  
+    .menu ul li a {
+      position: relative;
+      color: var(--color-text-ligth);
+      overflow: hidden;
+    }
+  
+    .menu ul li a:before {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      z-index: 10;
+      padding: 5px 30px;
+      background: none repeat scroll 0% 0% var(--color-secondary);
+      color: var(--color-text-dark);
+      content: attr(title);
+      transition: transform 0.3s ease 0s;
+    }
+  
+    .menu ul li a span {
+      display: block;
+      position: relative;
+      padding: 5px 30px;
+      background: none repeat scroll 0% 0% var(--color-primary);
+      transition: transform 0.3s ease 0s;
+      z-index: 12;
+    }
+  
+    .menu ul li a:hover span {
+      transform: translatex(100%);
+    }
+  
+    .darkModeButton {
+      width: 10%;
+    }
+  
+    .activeLink {
+     
+      text-decoration:overline;
+    }
+  }
+  
+  
+  @media screen and (min-width: 1025px) {
+    .menuLink {
+      justify-content: flex-start;
+    }
+  
+    .icon {
+      display: none;
+    }
+  
+    .menu hr {
+      display: none;
+    }
+    .menuText {
+      display: inline;
+    }
+  
+    .menu {
+      
+      top: 0px;
+      justify-content: left;
+    }
+  
+    .logoContainer {
+      width: 200px;
+      display: flex;
+      justify-content: left;
+      padding-left: 20px;
+      flex-wrap: wrap;
+      align-content: center;
+    }
+  
+    .menuItems{
+      width: 50%;
+      font-size: 25px;
+    }
+  
+    .menu ul li a {
+      position: relative;
+      color: var(--color-text-ligth);
+      overflow: hidden;
+    }
+  
+    .menu ul li a:before {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      z-index: 10;
+      padding: 5px 30px;
+      background: none repeat scroll 0% 0% var(--color-secondary);
+      color: var(--color-text-dark);
+      content: attr(title);
+      transition: transform 0.3s ease 0s;
+    }
+  
+    .menu ul li a span {
+      display: block;
+      position: relative;
+      padding: 5px 30px;
+      background: none repeat scroll 0% 0% var(--color-primary);
+      transition: transform 0.3s ease 0s;
+      z-index: 12;
+    }
+  
+    .menu ul li a:hover span {
+      transform: translatex(100%);
+    }
+  
+    .darkModeButton {
+      width: 10%;
+    }
+  
+    .activeLink {
+     
+      text-decoration:overline;
+    }
+  }
+  
