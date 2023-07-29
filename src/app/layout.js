@@ -1,4 +1,4 @@
-'use client'
+
 import './globals.css'
 import { Raleway } from 'next/font/google'
 import Providers from './providers'
@@ -18,20 +18,22 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es">
       <body className={rale.className}>
-        <Providers>
+      <Providers>
           {/* Header */}
           <header >
             <Menu />
           </header>
           {/* Page */}
           <main>
-            <PageWrapper>
+            
+              <PageWrapper>
               {children}
-            </PageWrapper>
+              </PageWrapper>
+              
           </main>
           {/* Footer */}
           <footer></footer>
-        </Providers>
+          </Providers>
       </body>
     </html>
   )
