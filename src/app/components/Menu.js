@@ -15,7 +15,7 @@ const Menu = () => {
       event.preventDefault();
     }
   }
-  console.log(currentRoute);
+
   return (
     <nav className={Styles.menu}>
       <div></div>

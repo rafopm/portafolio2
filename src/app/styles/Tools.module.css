@@ -1,0 +1,9 @@
+.container{
+    max-height: 100%;
+    max-width: 100%;
+    margin: auto;
+}
+
+.tabs{
+    margin: 20px;
+}

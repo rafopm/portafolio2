@@ -6,11 +6,8 @@
     display: flex;
     justify-content: space-between;
   
-    -webkit-transition: all 0.1s ease;
-    -moz-transition: all 0.1s ease;
-    -o-transition: all 0.1s ease;
-    transition: all 0.1s ease;
-    background-color: var(--color-background-dark);
+   
+    background-color: var(--color-text-dark);
     z-index: 11;
   
     font-size: 30px;
@@ -85,7 +82,7 @@
     width: 0.1vw;
     border-width: 0;
     color: var(--color-text-ligth);
-    background-color: var(--color-text-ligth);
+    background-color: var(--color-primary);
   }
   
   @media (min-width: 769px) and (max-width: 1024px) {

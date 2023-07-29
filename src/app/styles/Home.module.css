@@ -32,5 +32,10 @@
 
 
   .social{
+    position:relative;
     margin-top: 20px;
+  }
+
+  .pie{
+    margin-bottom: 20px;
   }
