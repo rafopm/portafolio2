@@ -2,10 +2,6 @@
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 
-export const metadata = {
-  title: 'ssss',
-  description: 'Genddddddp',
-};
 
 export default function Contactos() {
   const form = useRef();
