@@ -1,7 +1,7 @@
 import { Divider, Metric, Subtitle, Text } from "@tremor/react"
 import Image from "next/image"
 import Styles from '../styles/About.module.css'
-
+import { BsFillPersonFill } from "react-icons/bs";
 
 export const metadata = {
   title: 'ssss',
@@ -14,14 +14,8 @@ export default function About() {
     <div className={Styles.container}>
 
       <div className={Styles.texto}>
-        <div className={Styles.titulo}><Metric>Sobre mi</Metric>
-          <Image
-            src="/images/avatar.svg"
-            alt="Avatar Rafael"
-            width={50}
-            height={50}
-            
-          />
+        <div className={Styles.titulo}><Metric className="dark:text-color-secondary">Sobre mi</Metric>
+        <BsFillPersonFill className="text-4xl dark:text-color-secondary" />
         </div>
 
         <Divider className="mt-2 mb-3"/>

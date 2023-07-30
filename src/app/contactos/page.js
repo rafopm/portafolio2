@@ -1,38 +1,114 @@
-
-
+'use client'
+import { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 export const metadata = {
   title: 'ssss',
   description: 'Genddddddp',
-}
+};
 
 export default function Contactos() {
+  const form = useRef();
+  const SERVICEID = process.env.NEXT_PUBLIC_SERVICIO;
+  const TEMPLATEID = process.env.NEXT_PUBLIC_TEMPLATE;
+  const PUBLICKEYID = process.env.NEXT_PUBLIC_PUBLICKEY;
+
+  const [successMessage, setSuccessMessage] = useState('');
+  const [isFormDisabled, setIsFormDisabled] = useState(false);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    // Get form data
+    const formData = new FormData(form.current);
+    const name = formData.get('Nombre');
+    const email = formData.get('Email');
+    const message = formData.get('Mensaje');
+
+    // Perform basic form validation
+    if (!name || !email || !message) {
+      alert('Please fill out all required fields.');
+      return;
+    }
+
+    // Email validation using regular expression
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+      alert('Please enter a valid email address.');
+      return;
+    }
+
+    setIsFormDisabled(true); // Disable the form fields and submit button during submission
+
+    emailjs.sendForm(SERVICEID, TEMPLATEID, form.current, PUBLICKEYID)
+      .then((result) => {
+        console.log(result.text);
+        setSuccessMessage('Message sent successfully.');
+        form.current.reset(); // Reset the form fields
+        setIsFormDisabled(false); // Re-enable the form fields and submit button after success
+      })
+      .catch((error) => {
+        console.log(error.text);
+        alert('An error occurred while sending the message. Please try again later.');
+        setIsFormDisabled(false); // Re-enable the form fields and submit button after an error
+      });
+  };
+
   return (
-
-    <div>
-      Contactos
-      <div>
-        <section id="contactos">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mollis nunc sed id semper risus in. At augue eget arcu dictum varius duis at consectetur. Fermentum iaculis eu non diam phasellus. Egestas diam in arcu cursus euismod quis. Lacus sed viverra tellus in hac habitasse platea dictumst. Nunc congue nisi vitae suscipit tellus mauris. Quam id leo in vitae turpis massa. Et magnis dis parturient montes nascetur ridiculus. Ipsum nunc aliquet bibendum enim facilisis gravida neque. Luctus venenatis lectus magna fringilla urna porttitor. Nisi est sit amet facilisis magna etiam. Leo integer malesuada nunc vel risus commodo viverra. Condimentum mattis pellentesque id nibh. Urna nunc id cursus metus aliquam. Tellus at urna condimentum mattis pellentesque id nibh tortor id. Fermentum odio eu feugiat pretium nibh ipsum consequat. Rutrum quisque non tellus orci. Nunc aliquet bibendum enim facilisis gravida neque convallis a cras.
-
-          Quis vel eros donec ac. Lectus magna fringilla urna porttitor rhoncus dolor purus non. Ornare suspendisse sed nisi lacus sed viverra tellus in hac. Amet massa vitae tortor condimentum lacinia quis vel eros. Et netus et malesuada fames ac turpis egestas sed tempus. Massa sed elementum tempus egestas sed sed risus pretium. Erat imperdiet sed euismod nisi porta. Id ornare arcu odio ut sem nulla pharetra diam. Enim neque volutpat ac tincidunt vitae semper quis. Ut sem viverra aliquet eget. Urna molestie at elementum eu facilisis sed odio.
-        </section>
-        <br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-      </div>
+    <div className="w-full max-w-md mx-auto bg-white rounded-lg shadow-md p-8 mt-10">
+      {successMessage ? (
+        <div className="mt-4 text-green-500 font-bold">{successMessage}</div>
+      ) : (
+        <form ref={form} onSubmit={sendEmail}>
+          <div className="mb-4">
+            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="Nombre">
+              Name
+            </label>
+            <input
+              className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              type="text"
+              name="Nombre"
+              required
+              disabled={isFormDisabled} // Disable the field when the form is being submitted
+            />
+          </div>
+          <div className="mb-4">
+            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="Email">
+              Email
+            </label>
+            <input
+              className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              type="email"
+              name="Email"
+              required
+              pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
+              disabled={isFormDisabled} // Disable the field when the form is being submitted
+            />
+          </div>
+          <div className="mb-4">
+            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="Mensaje">
+              Message
+            </label>
+            <textarea
+              className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              name="Mensaje"
+              required
+              rows={4} // Set the number of visible rows to 4
+              disabled={isFormDisabled} // Disable the field when the form is being submitted
+            />
+          </div>
+          <div className="flex justify-center">
+            <input
+              className={`bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline cursor-pointer ${
+                isFormDisabled ? 'opacity-50 cursor-not-allowed' : ''
+              }`}
+              type="submit"
+              value="Send"
+              disabled={isFormDisabled} // Disable the button when the form is being submitted
+            />
+          </div>
+        </form>
+      )}
     </div>
-
-  )
+  );
 }

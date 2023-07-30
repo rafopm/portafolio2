@@ -32,7 +32,7 @@ export default function Home() {
         <div className={Styles.cards}>
 
           <div  >
-            <Card className={`max-w-md mx-auto opacity-75 ${Styles['card-hover']}`}>
+            <Card className={`max-w-md mx-auto opacity-75 bg-color-text-dark ${Styles['card-hover']}`}>
               <p className="font-bold text-2xl text-color-secondary ">Hola, soy</p>
               <p className="font-bold text-3xl text-color-tertiary ">Rafael Pampavilca</p>
               <p className="font-bold text-2xl text-color-secondary ">Programador web</p>

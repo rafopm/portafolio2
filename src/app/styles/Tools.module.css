@@ -7,3 +7,11 @@
 .tabs{
     margin: 20px;
 }
+
+
+
+.titulo{
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}

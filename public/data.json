@@ -1,0 +1,131 @@
+{
+    "front": [
+      {
+        "id": 1,
+        "name": "JavaScript",
+        "nivel": 75,
+        "detalle": ""
+      },
+      {
+        "id": 2,
+        "name": "CSS",
+        "nivel": 80,
+        "detalle": ""
+      },
+      {
+        "id": 3,
+        "name": "HTML",
+        "nivel": 90
+      },
+      {
+        "id": 4,
+        "name": "React",
+        "nivel": 60,
+        "detalle": ""
+      },
+      {
+        "id": 5,
+        "name": "NextJS",
+        "nivel": 60,
+        "detalle": ""
+      },
+      {
+        "id": 6,
+        "name": "Bootstrap",
+        "nivel": 40,
+        "detalle": ""
+      },
+      {
+        "id": 7,
+        "name": "Tailwind",
+        "nivel": 40,
+        "detalle": ""
+      }
+
+    ],
+
+    "backend": [
+      {
+        "id": 1,
+        "name": "Java",
+        "nivel": 60,
+        "detalle": ""
+      },
+      {
+        "id": 2,
+        "name": "JavaX",
+        "nivel": 60,
+        "detalle": ""
+      },
+      {
+        "id": 3,
+        "name": "Spring Boot",
+        "nivel": 50,
+        "detalle": ""
+      },
+      {
+        "id": 4,
+        "name": "MySQL",
+        "nivel": 60,
+        "detalle": ""
+      },
+      {
+        "id": 5,
+        "name": "MongoDB",
+        "nivel": 60,
+        "detalle": ""
+      },
+      {
+        "id": 6,
+        "name": "Node",
+        "nivel": 30,
+        "detalle": ""
+      }
+
+    ],
+
+    "otros": [
+      {
+        "id": 1,
+        "name": "Excel Avanzado (Macros)",
+        "nivel": 75,
+        "detalle": ""
+      },
+      {
+        "id": 2,
+        "name": "Photoshop",
+        "nivel": 50,
+        "detalle": ""
+      },
+      {
+        "id": 3,
+        "name": "Corel Draw",
+        "nivel": 50,
+        "detalle": ""
+      },
+      {
+        "id": 4,
+        "name": "Illustrator",
+        "nivel": 30,
+        "detalle": ""
+      },
+      {
+        "id": 5,
+        "name": "WordPress",
+        "nivel": 50,
+        "detalle": ""
+      },
+      {
+        "id": 6,
+        "name": "Joomla",
+        "nivel": 75,
+        "detalle": ""
+      }
+
+    ]
+
+  }
+  
+  
+  
+  
