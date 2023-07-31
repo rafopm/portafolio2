@@ -26,9 +26,9 @@ export default function RootLayout({ children }) {
           {/* Page */}
           <main>
             
-              <PageWrapper>
+              
               {children}
-              </PageWrapper>
+              
               
           </main>
           {/* Footer */}

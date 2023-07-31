@@ -1,0 +1,19 @@
+.container{
+    max-height: 100%;
+    max-width: 100%;
+    margin: auto;
+}
+
+.texto{
+    margin: 30px;
+}
+
+.parrafo{
+    gap: 10px;
+}
+
+.titulo{
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
