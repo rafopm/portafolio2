@@ -4,6 +4,7 @@ import emailjs from '@emailjs/browser';
 import Styles from '../styles/Contactos.module.css'
 import { BsFillPersonFill } from 'react-icons/bs';
 import { Divider, Metric } from '@tremor/react';
+import { AiFillContacts } from 'react-icons/ai';
 
 
 export default function Contactos() {
@@ -55,14 +56,14 @@ export default function Contactos() {
 
   return (
     <div className={Styles.container}>
-      <div>
-        <div className='m-8 mb-0'>
-          <div className={Styles.titulo}><Metric className="dark:text-color-tertiary">Contactos</Metric>
-            <BsFillPersonFill className="text-4xl dark:text-color-tertiary" />
-          </div>
-        </div>
+      <div className={Styles.head}>
 
-        <Divider className="mt-2 mb-3" />
+        <div className={Styles.titulo}><Metric className="dark:text-color-tertiary">Contactos</Metric>
+          <AiFillContacts className="text-4xl dark:text-color-tertiary" />
+        </div>
+      </div>
+      <div >
+        <Divider className="mt-0 mb-3" />
 
         <div className="w-full max-w-md mx-auto rounded-lg pt-0  p-8 mt-1">
           {successMessage ? (

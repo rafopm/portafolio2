@@ -14,11 +14,12 @@ export default function About() {
     <div className={Styles.container}>
 
       <div className={Styles.texto}>
-        <div className={Styles.titulo}><Metric className="dark:text-color-secondary">Sobre mi</Metric>
-        <BsFillPersonFill className="text-4xl dark:text-color-secondary" />
+        <div className={Styles.titulo}><Metric className="dark:text-color-tertiary">Sobre mi</Metric>
+          <BsFillPersonFill className="text-4xl dark:text-color-tertiary" />
         </div>
-
-        <Divider className="mt-2 mb-3"/>
+      </div>
+      <Divider className="mt-2 mb-3" />
+      <div>
         <div className={Styles.parrafo}>
           <p className="mb-4">Soy Programador Web. Me apasiona solucionar problemas y trabajar con datos.</p>
           <p className="mb-4">Uso herramientas de diseño gráfico para dar color a las interfaces de usuario y también para la impresión en gran formato y souvenirs.</p>

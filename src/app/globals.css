@@ -82,7 +82,7 @@ input[type="text"], input[type="email"], input[type="password"] {
 /* Estilos para pantallas pequeñas */
 @media screen and (max-width: 480px) {
   body {
-    overflow: hidden;
+    /* overflow: hidden; */
     
   }
 }

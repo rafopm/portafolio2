@@ -34,17 +34,19 @@ export default function Tools() {
     fetch("data.json")
       .then(response => response.json())
       .then(data => {
+        console.log(data.front);
         setFrontData(data.front);
         setBackendData(data.backend);
         setOtrosData(data.otros);
       });
+      
   }, []);
 
   return (
     <div className={Styles.container}>
       <div className={Styles.tabs}>
-        <div><div className={Styles.titulo}><Metric className="dark:text-color-secondary">SKills</Metric>
-          <BsTools className="text-4xl dark:text-color-secondary" />
+        <div><div className={Styles.titulo}><Metric className="dark:text-color-tertiary">SKills</Metric>
+          <BsTools className="text-4xl dark:text-color-tertiary" />
         </div>
 
           <Divider className="mt-2 mb-3" />

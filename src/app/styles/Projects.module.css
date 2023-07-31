@@ -1,17 +1,91 @@
-.container{
-    max-height: 100%;
+.container {
     max-width: 100%;
-    margin: auto;
-}
-
-.tabs{
     margin: 20px;
+
+}
+
+.head {
+    margin: 20px 20px 10px 20px;
 }
 
 
-
-.titulo{
-    display:flex;
+.titulo {
+    display: flex;
     justify-content: space-between;
     align-items: flex-end;
+}
+
+.cardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 300px;
+    max-height: 550px;
+    margin-bottom: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cardData {
+    width: 100%;
+    flex: 1;
+}
+
+.cardImage {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 200px;
+}
+
+.cardImage img {
+
+    width: 100%;
+    max-height: 100%;
+    border-radius: 5px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 1);
+    transition: all 0.6s ease;
+    object-fit: cover;
+    object-position: top;
+   
+
+}
+
+.enlargedImageOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.enlargedImage {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 1);
+}
+
+.clickOverlay {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
 }
