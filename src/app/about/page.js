@@ -7,7 +7,7 @@ export const metadata = {
   title: 'ssss',
   description: 'Genddddddp',
 }
-
+ 
 export default function About() {
   return (
 

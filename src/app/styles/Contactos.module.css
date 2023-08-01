@@ -1,6 +1,6 @@
 .container{
     max-height: 100%;
-    max-width: 100%;
+    max-width: 1024px;
     margin: auto;
 }
 
@@ -16,4 +16,11 @@
     display:flex;
     justify-content: space-between;
     align-items: flex-end;
+}
+
+
+@media screen and (min-width: 1025px) {
+    .head{
+        margin: 20px 0px 10px 0px;
+    }
 }

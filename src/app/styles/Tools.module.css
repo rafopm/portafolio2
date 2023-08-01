@@ -1,17 +1,21 @@
-.container{
+.container {
     max-height: 100%;
-    max-width: 100%;
+    max-width: 1024px;
     margin: auto;
 }
 
-.tabs{
+.tabs {
     margin: 20px;
 }
 
-
-
-.titulo{
-    display:flex;
+.titulo {
+    display: flex;
     justify-content: space-between;
     align-items: flex-end;
+}
+
+@media screen and (min-width: 1025px) {
+    .tabs {
+        margin: 20px 0px 20px 0px;
+    }
 }
