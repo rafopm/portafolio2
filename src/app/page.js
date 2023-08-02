@@ -1,13 +1,11 @@
 'use client'
 import { Card } from '@tremor/react';
 import { FaHandPointRight } from "react-icons/fa";
-
-
 import Styles from './styles/Home.module.css'
 import Link from 'next/link';
-import { useEffect } from 'react';
 import TextoAnimado from './components/TextoAnimado';
 import { Redes } from './components/Redes';
+import Trail from './components/TrailSpringTexto';
 
 export default function Home() {
 
@@ -22,13 +20,18 @@ export default function Home() {
         <div className={Styles.cards}>
 
           <div className={Styles.card}>
-            <Card className={`max-w-md mx-auto opacity-75 bg-color-text-dark ${Styles['cardHover']}`}>
-              <p className="font-bold text-2xl text-color-secondary ">Hola, soy</p>
-              <p className="font-bold text-3xl text-color-tertiary ">Rafael Pampavilca</p>
-              <p className="font-bold text-2xl text-color-secondary ">Programador web</p>
+            <Card className={`max-w-md mx-auto opacity-75 ${Styles['cardHover']}`}>
+              <Trail>
+                <p className="font-bold text-2xl text-color-secondary  ">Hola, soy</p>
+                <p className="font-bold text-3xl dark:text-color-tertiary ">Rafael Pampavilca</p>
+                <p className="font-bold text-2xl text-color-secondary ">Programador web</p>
+              </Trail>
+
               <div className="flex justify-end ">
                 <Link href="/contactos" passHref>
-                  <button className="mt-4 text-lg flex flex-row items-center bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow" ><FaHandPointRight className="mr-4 text-2xl text-color-background-dark" />Contáctame</button>
+                  <button className=" border-2 mt-4 text-lg dark:text-color-text-dark bg-color-tertiary flex flex-row items-center font-semibold py-2 px-4 border border-gray-900 rounded shadow">
+                    <FaHandPointRight className="mr-4 text-2xl " />Contáctame
+                  </button>
                 </Link >
               </div>
             </Card>
@@ -45,9 +48,7 @@ export default function Home() {
 
           </div>
         </div>
-        <div className={Styles.social}>
 
-        </div>
         <div
           className={[
             "bg-cover bg-center absolute inset-0 bg-opacity-50",

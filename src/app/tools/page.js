@@ -23,6 +23,7 @@ import { RxMix } from "react-icons/rx";
 import React from 'react'
 import Styles from '../styles/Tools.module.css'
 import { BsTools } from "react-icons/bs";
+import Trail from "../components/TrailSpringTexto";
 
 
 export default function Tools() {
@@ -58,10 +59,22 @@ export default function Tools() {
             <TabGroup>
 
               <TabList className="mt-4 ">
-                <Tab className="" ><FcSmartphoneTablet className=" text-2xl" /><div className=" text-2xl "> Frontend</div></Tab>
-                <Tab ><FcDataConfiguration className=" text-2xl" /><div className=" text-2xl">Backend</div> </Tab>
-                <Tab ><RxMix className=" text-2xl" /><div className="text-2xl">Otros</div> </Tab>
-
+                <Tab className="" >
+                  <Trail>
+                    <FcSmartphoneTablet className=" text-2xl" />
+                    <div className=" text-2xl "> Frontend</div>
+                  </Trail>
+                </Tab>
+                <Tab >
+                  <Trail>
+                    <FcDataConfiguration className=" text-2xl" /><div className=" text-2xl">Backend</div>
+                  </Trail>
+                </Tab>
+                <Tab >
+                  <Trail>
+                    <RxMix className=" text-2xl" /><div className="text-2xl">Otros</div>
+                  </Trail>
+                </Tab>
               </TabList>
 
               <TabPanels>
@@ -71,14 +84,14 @@ export default function Tools() {
                   {frontData.length >= 0 && frontData.map((front, i) => (
                     <div key={front.id} className="mt-4">
                       <Flex className="mt-4">
-                        <Subtitle className=" w-full dark:text-white " > {front.name}</Subtitle>
+                        <Subtitle className=" text-gray-900 w-full dark:text-white " > {front.name}</Subtitle>
                         <Flex className="space-x-2" justifyContent="end">
 
                           <Text>{front.nivel}%</Text>
 
                         </Flex>
                       </Flex>
-                      <ProgressBar value={front.nivel} color="fuchsia"  className="mt-2" />
+                      <ProgressBar value={front.nivel} color="blue" className="mt-2" />
                     </div>
                   ))}
 
@@ -88,12 +101,12 @@ export default function Tools() {
                   {backendData.length > 0 && backendData.map((backend, i) => (
                     <div key={backend.id} className="mt-4">
                       <Flex className="mt-4">
-                        <Subtitle className="w-full dark:text-white"> {backend.name}</Subtitle>
+                        <Subtitle className=" text-gray-900  w-full dark:text-white"> {backend.name}</Subtitle>
                         <Flex className="space-x-2" justifyContent="end">
                           <Text>{backend.nivel}%</Text>
                         </Flex>
                       </Flex>
-                      <ProgressBar value={backend.nivel} color="fuchsia"  className="mt-2" />
+                      <ProgressBar value={backend.nivel} color="blue" className="mt-2" />
                     </div>
                   ))}
 
@@ -104,12 +117,12 @@ export default function Tools() {
                   {otrosData.length > 0 && otrosData.map((otros, i) => (
                     <div key={otros.id} className="mt-4">
                       <Flex className="mt-4">
-                        <Subtitle className="w-full dark:text-white"> {otros.name}</Subtitle>
+                        <Subtitle className=" text-gray-900  w-full dark:text-white"> {otros.name}</Subtitle>
                         <Flex className="space-x-2" justifyContent="end">
                           <Text>{otros.nivel}%</Text>
                         </Flex>
                       </Flex>
-                      <ProgressBar value={otros.nivel} color="fuchsia"  className="mt-2" />
+                      <ProgressBar value={otros.nivel} color="blue" className="mt-2" />
                       <Flex className="space-x-2" justifyContent="end">
                         <Text>{otros.detalle}</Text>
                       </Flex>

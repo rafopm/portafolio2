@@ -1,10 +1,16 @@
+'use client'
 import { Card, Divider, Metric, Subtitle, Text, Title } from "@tremor/react"
 import Image from "next/image"
 import Styles from '../styles/About.module.css'
 import { BsEmojiSmile, BsFillPersonFill } from "react-icons/bs";
+import Trail from "../components/TrailSpringTexto";
+import { useEffect, useState } from "react";
 
 
 export default function About() {
+
+
+
   return (
 
     <div className={Styles.container}>
@@ -16,9 +22,17 @@ export default function About() {
       </div>
       <Divider className="mt-2 mb-3" />
       <div>
+
         <div className={Styles.parrafo}>
           <Card className="dark:bg-color-text-dark ">
-            <div className="flex flex-row  "><Metric className="mr-5 dark:text-color-secondary">¡Hola! </Metric> <BsEmojiSmile className="text-3xl dark:text-color-secondary" /> </div>
+            <div className="flex flex-row  ">
+              <Trail >
+                <Metric className="mr-5 dark:text-color-secondary">¡Hola! </Metric>
+              </Trail>
+              <Trail >
+                <BsEmojiSmile className="text-3xl dark:text-color-secondary" />
+              </Trail>
+            </div>
 
             <Title className="mb-4">Soy un apasionado Programador Web, siempre en busca de emocionantes retos y fascinantes problemas por resolver. Me encuentro en mi elemento trabajando con datos y encontrando soluciones creativas que den vida.
               ¿Sabes qué más puedo hacer? ¡Darle vida a tus diseños con herramientas de diseño gráfico y llevarlos a la realidad en formatos impresos o en hermosos souvenirs!</Title>
@@ -28,6 +42,7 @@ export default function About() {
             <Title className="mb-4">Espero que mi breve presentación te haya permitido conocerme mejor. Siempre estoy emocionado por nuevas oportunidades y desafíos. Si tienes alguna idea en mente o algún proyecto en el que podamos colaborar, ¡estaré encantado de escuchar más sobre ello! Gracias por visitar mi portafolio web.</Title>
           </Card>
         </div>
+
       </div>
       <div
 

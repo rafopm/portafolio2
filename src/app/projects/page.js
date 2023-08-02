@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { AiFillProject } from "react-icons/ai";
 import { BsTools } from "react-icons/bs";
+import Trail from "../components/TrailSpringTexto";
 import Styles from '../styles/Projects.module.css'
 
 export default function Projects() {
@@ -48,37 +49,39 @@ export default function Projects() {
           <div className={Styles.cardsContainer}>
 
             {projectData.length >= 0 && projectData.map((project, i) => (
-              <Card key={project.id} className={`dark:bg-color-text-dark   ${Styles.card}`} >
-                <div className={Styles.cardData}>
-                  <Text className="dark:text-color-secondary ">{project.category}</Text>
-                  <Metric>{project.title}</Metric>
-                  <Callout className="mt-4" title={`Tools: ${project.tools}`} color="teal">
-                    {project.description}
-                  </Callout>
-                  <Flex className="mt-4">
-                    <Text className="w-full">
-                      <a href={project.demo} target="_blank" rel="noopener noreferrer" className="max-w-full">
-                        Demo
-                      </a>
-                    </Text>
-                    <Flex className="space-x-2 " justifyContent="end">
-                      <Text>
-                        <a href={project.repositorio} target="_blank" rel="noopener noreferrer">
-                          Repositorio
+              
+                <Card key={project.id} className={`dark:bg-color-text-dark   ${Styles.card}`} >
+                  <div className={Styles.cardData}>
+                    <Text className="dark:text-color-secondary ">{project.category}</Text>
+                    <Metric>{project.title}</Metric>
+                    <Callout className="mt-4" title={`Tools: ${project.tools}`} color="teal">
+                      {project.description}
+                    </Callout>
+                    <Flex className="mt-4">
+                      <Text className="w-full">
+                        <a href={project.demo} target="_blank" rel="noopener noreferrer" className="max-w-full">
+                          Demo
                         </a>
                       </Text>
+                      <Flex className="space-x-2 " justifyContent="end">
+                        <Text>
+                          <a href={project.repositorio} target="_blank" rel="noopener noreferrer">
+                            Repositorio
+                          </a>
+                        </Text>
+                      </Flex>
                     </Flex>
-                  </Flex>
-                </div>
-                <div
-                  className={`mt-5 ${Styles.cardImage}`}
-                  onClick={() => handleImageClick(`/images/projects/${project.id}.png`)}
-                >
-                  {/* Agregar un elemento visual o texto indicando que se puede hacer clic en la imagen */}
-                  <div className={Styles.clickOverlay}>Haz clic para ampliar</div>
-                  <img src={`/images/projects/${project.id}.png`} alt={project.title} />
-                </div>
-              </Card>
+                  </div>
+                  <div
+                    className={`mt-5 ${Styles.cardImage}`}
+                    onClick={() => handleImageClick(`/images/projects/${project.id}.png`)}
+                  >
+                    {/* Agregar un elemento visual o texto indicando que se puede hacer clic en la imagen */}
+                    <div className={Styles.clickOverlay}>Haz clic para ampliar</div>
+                    <img src={`/images/projects/${project.id}.png`} alt={project.title} />
+                  </div>
+                </Card>
+              
             ))}
           </div>
         </div>

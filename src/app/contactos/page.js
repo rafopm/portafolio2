@@ -6,6 +6,7 @@ import { BsFillPersonFill } from 'react-icons/bs';
 import { Card, Divider, Metric, Text, Title } from '@tremor/react';
 import { AiFillContacts } from 'react-icons/ai';
 import { Redes } from '../components/Redes';
+import Trail from '../components/TrailSpringTexto';
 
 
 export default function Contactos() {
@@ -68,63 +69,72 @@ export default function Contactos() {
           <Divider className="mt-0 mb-3" />
         </div>
 
+
         <div className={Styles.bodyContainer}>
-          
-            <div className="w-full max-w-md mx-450 rounded-lg pt-0  p-8 mt-1">
-              {successMessage ? (
-                <div className="mt-4 text-green-500 font-bold">{successMessage}</div>
-              ) : (
-                <form ref={form} onSubmit={sendEmail}>
-                  <div className="mb-4">
-                    <label className="block text-gray-700 text-sm font-bold mb-2 dark:text-color-text-ligth" htmlFor="Nombre">
-                      Name
-                    </label>
-                    <input
-                      className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none bg-gray-100"
 
-                      name="Nombre"
-                      required
-                      disabled={isFormDisabled}
-                    />
-                  </div>
-                  <div className="mb-4">
-                    <label className="block text-gray-700 text-sm font-bold mb-2 dark:text-color-text-ligth" htmlFor="Email">
-                      Email
-                    </label>
-                    <input
-                      className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none bg-gray-100"
+          <div className="w-full  max-w-md mx-450 rounded-lg pt-0  p-8 mt-1">
+            <div className="flex flex-row mb-4  ">
+              <Trail >
+                <Metric className="mr-5 dark:text-color-secondary">¡Escríbeme! </Metric>
+              </Trail>
+              <Trail >
 
-                      name="Email"
-                      required
-                      pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
-                      disabled={isFormDisabled}
-                    />
-                  </div>
-                  <div className="mb-4">
-                    <label className="block text-gray-700 text-sm font-bold mb-2 dark:text-color-text-ligth" htmlFor="Mensaje">
-                      Mensaje
-                    </label>
-                    <textarea
-                      className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none bg-gray-100"
-                      name="Mensaje"
-                      required
-                      rows={8}
-                      disabled={isFormDisabled}
-                    />
-                  </div>
-                  <div className="flex justify-end">
-                    <input
-                      className={`bg-color-secondary hover:bg-color-primary text-white font-bold py-2 px-4 rounded focus:outline-none cursor-pointer ${isFormDisabled ? 'opacity-50 cursor-not-allowed' : ''
-                        }`}
-                      type="submit"
-                      value="Enviar"
-                      disabled={isFormDisabled}
-                    />
-                  </div>
-                </form>
-              )}
+              </Trail>
             </div>
-          
+            {successMessage ? (
+              <div className="mt-4 text-green-500 font-bold">{successMessage}</div>
+            ) : (
+              <form ref={form} onSubmit={sendEmail}>
+                <div className="mb-4">
+                  <label className="block text-gray-700 text-sm font-bold mb-2 dark:text-color-text-ligth" htmlFor="Nombre">
+                    Name
+                  </label>
+                  <input
+                    className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none bg-gray-100"
+
+                    name="Nombre"
+                    required
+                    disabled={isFormDisabled}
+                  />
+                </div>
+                <div className="mb-4">
+                  <label className="block text-gray-700 text-sm font-bold mb-2 dark:text-color-text-ligth" htmlFor="Email">
+                    Email
+                  </label>
+                  <input
+                    className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none bg-gray-100"
+
+                    name="Email"
+                    required
+                    pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
+                    disabled={isFormDisabled}
+                  />
+                </div>
+                <div className="mb-4">
+                  <label className="block text-gray-700 text-sm font-bold mb-2 dark:text-color-text-ligth" htmlFor="Mensaje">
+                    Mensaje
+                  </label>
+                  <textarea
+                    className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none bg-gray-100"
+                    name="Mensaje"
+                    required
+                    rows={8}
+                    disabled={isFormDisabled}
+                  />
+                </div>
+                <div className="flex justify-end">
+                  <input
+                    className={`bg-color-secondary hover:bg-color-primary text-white font-bold py-2 px-4 rounded focus:outline-none cursor-pointer ${isFormDisabled ? 'opacity-50 cursor-not-allowed' : ''
+                      }`}
+                    type="submit"
+                    value="Enviar"
+                    disabled={isFormDisabled}
+                  />
+                </div>
+              </form>
+            )}
+          </div>
+
           <div className={Styles.cardsContainer}>
             <Card className={`${Styles.card} max-w-xs mx-auto h-25`} decoration="top" decorationColor="indigo">
               <Metric>Redes</Metric>

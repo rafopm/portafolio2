@@ -80,6 +80,10 @@
   font-size: 2rem;
 }
 
+.logoContainer:hover{
+  color: var(--color-secondary);
+}
+
 .menuLink:hover {
   color: var(--color-primary);
 }
