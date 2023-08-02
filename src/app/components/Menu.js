@@ -19,7 +19,7 @@ const Menu = () => {
   return (
     <nav className={Styles.container}>
       <div className={Styles.menu}>
-        <div className={Styles.logoContainer}>
+        <div className={`text-color-tertiary ${Styles.logoContainer}`}>
           Rafopm
         </div>
         <ul className={Styles.menuItems}>
@@ -44,10 +44,10 @@ const Menu = () => {
             <Link
               className={`${currentRoute === "/about" ? Styles.activeLink : Styles.menuLink}`}
               href="/about"
-              title="About"
+              title="Sobre mi"
               onClick={handleClick}
             >
-              <span className={Styles.menuText}>About</span>
+              <span className={Styles.menuText}>Sobre mi</span>
               <BsFillPersonFill className={Styles.icon}
                 style={{
                   color: currentRoute === "/about" && "#C9E265",
@@ -58,10 +58,10 @@ const Menu = () => {
             <Link
               className={`${currentRoute === "/tools" ? Styles.activeLink : Styles.menuLink}`}
               href="/tools"
-              title="Tools"
+              title="Skills"
               onClick={handleClick}
             >
-              <span className={Styles.menuText}>Tools</span>
+              <span className={Styles.menuText}>Skills</span>
               <BsTools className={Styles.icon}
                 style={{
                   color: currentRoute === "/tools" && "#C9E265",
@@ -72,10 +72,10 @@ const Menu = () => {
             <Link
               className={`${currentRoute === "/projects" ? Styles.activeLink : Styles.menuLink}`}
               href="/projects"
-              title="Projects"
+              title="Proyectos"
               onClick={handleClick}
             >
-              <span className={Styles.menuText}>Projects</span>
+              <span className={Styles.menuText}>Proyectos</span>
               <AiFillProject className={Styles.icon}
                 style={{
                   color: currentRoute === "/projects" && "#C9E265",

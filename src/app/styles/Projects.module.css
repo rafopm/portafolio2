@@ -19,6 +19,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 10px;
 }
 
 .card {
@@ -28,6 +29,9 @@
     padding: 10px;
     display: flex;
     flex-direction: column;
+
+    
+
 }
 
 .cardData {
@@ -67,6 +71,8 @@
     justify-content: center;
     align-items: center;
     z-index: 9999;
+
+
 }
 
 .enlargedImage {
@@ -82,12 +88,15 @@
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
     color: var(--color-tertiary);
     border-radius: 5px;
     cursor: pointer;
     font-size: 14px;
+    font-weight: bold;
     text-align: center;
+
+    border: 1px solid var(--color-tertiary);
 }
 
 @media screen and (min-width: 1025px) {

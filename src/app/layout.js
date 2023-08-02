@@ -18,22 +18,22 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es">
       <body className={rale.className}>
-      <Providers>
+        <Providers>
           {/* Header */}
           <header >
             <Menu />
           </header>
           {/* Page */}
           <main>
-            
-              
-              {children}
-              
-              
+
+
+            {children}
+
+
           </main>
           {/* Footer */}
           <footer></footer>
-          </Providers>
+        </Providers>
       </body>
     </html>
   )

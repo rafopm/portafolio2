@@ -1,10 +1,14 @@
 'use client'
 import { Card } from '@tremor/react';
 import { FaHandPointRight } from "react-icons/fa";
-import { BsGithub, BsLinkedin, BsYoutube, BsTwitter } from "react-icons/bs";
+
 
 import Styles from './styles/Home.module.css'
 import Link from 'next/link';
+import { useEffect } from 'react';
+import TextoAnimado from './components/TextoAnimado';
+import { Redes } from './components/Redes';
+
 export default function Home() {
 
   return (
@@ -12,27 +16,13 @@ export default function Home() {
       <div className={Styles.elementos}>
         <div className={Styles.social}>
 
-          <div className="flex items-center flex-row justify-center text-3xl " >
-            <Link href="https://github.com/rafopm" passHref>
-              <BsGithub className="mr-4 text-color-tertiary" />
-            </Link >
-            <Link href="" passHref>
-              <BsYoutube className="mr-4 text-color-tertiary" />
-            </Link>
-            <Link href="" passHref>
-              <BsTwitter className="mr-4 text-color-tertiary" />
-            </Link>
-            <Link href="https://www.linkedin.com/in/rafael-pampavilca/" passHref>
-              <BsLinkedin className="mr-4 text-color-tertiary" />
-            </Link>
+          <Redes color="text-color-tertiary" />
 
-
-          </div>
         </div>
         <div className={Styles.cards}>
 
-          <div  >
-            <Card className={`max-w-md mx-auto opacity-75 bg-color-text-dark ${Styles['card-hover']}`}>
+          <div className={Styles.card}>
+            <Card className={`max-w-md mx-auto opacity-75 bg-color-text-dark ${Styles['cardHover']}`}>
               <p className="font-bold text-2xl text-color-secondary ">Hola, soy</p>
               <p className="font-bold text-3xl text-color-tertiary ">Rafael Pampavilca</p>
               <p className="font-bold text-2xl text-color-secondary ">Programador web</p>
@@ -42,6 +32,14 @@ export default function Home() {
                 </Link >
               </div>
             </Card>
+          </div>
+
+          <div>
+            <div className={Styles.cardOcultar}>
+              <TextoAnimado text="Rafael * Pampavilca * ">
+                <img className={Styles.imageAnimar} src="images/avatar.svg" alt="Avatar" />
+              </TextoAnimado>
+            </div>
           </div>
           <div>
 

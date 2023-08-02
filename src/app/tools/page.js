@@ -13,6 +13,8 @@ import {
   TabPanels,
   TabPanel,
   Divider,
+  Title,
+  Subtitle,
 } from "@tremor/react";
 import { FcSmartphoneTablet, FcDataConfiguration } from "react-icons/fc";
 import { RxMix } from "react-icons/rx";
@@ -39,7 +41,7 @@ export default function Tools() {
         setBackendData(data.backend);
         setOtrosData(data.otros);
       });
-      
+
   }, []);
 
   return (
@@ -52,74 +54,75 @@ export default function Tools() {
           <Divider className="mt-2 mb-3" />
         </div>
         <div>
+          <Card className="dark:bg-color-text-dark ">
+            <TabGroup>
 
-          <TabGroup>
+              <TabList className="mt-4 ">
+                <Tab className="" ><FcSmartphoneTablet className=" text-2xl" /><div className=" text-2xl "> Frontend</div></Tab>
+                <Tab ><FcDataConfiguration className=" text-2xl" /><div className=" text-2xl">Backend</div> </Tab>
+                <Tab ><RxMix className=" text-2xl" /><div className="text-2xl">Otros</div> </Tab>
 
-            <TabList className="mt-4">
-              <Tab ><FcSmartphoneTablet className=" text-2xl" /><div className="text-lg"> Frontend</div></Tab>
-              <Tab ><FcDataConfiguration className=" text-2xl" /><div className="text-lg">Backend</div> </Tab>
-              <Tab ><RxMix className=" text-2xl" /><div className="text-lg">Otros</div> </Tab>
+              </TabList>
 
-            </TabList>
+              <TabPanels>
 
-            <TabPanels>
+                <TabPanel>
 
-              <TabPanel>
+                  {frontData.length >= 0 && frontData.map((front, i) => (
+                    <div key={front.id} className="mt-4">
+                      <Flex className="mt-4">
+                        <Subtitle className=" w-full dark:text-white " > {front.name}</Subtitle>
+                        <Flex className="space-x-2" justifyContent="end">
 
-                {frontData.length >= 0 && frontData.map((front, i) => (
-                  <div key={front.id} className="mt-4">
-                    <Flex className="mt-4">
-                      <Text className="w-full"> {front.name}</Text>
-                      <Flex className="space-x-2" justifyContent="end">
+                          <Text>{front.nivel}%</Text>
 
-                        <Text>{front.nivel}%</Text>
-
+                        </Flex>
                       </Flex>
-                    </Flex>
-                    <ProgressBar value={front.nivel} className="mt-2" />
-                  </div>
-                ))}
+                      <ProgressBar value={front.nivel} color="fuchsia"  className="mt-2" />
+                    </div>
+                  ))}
 
-              </TabPanel>
+                </TabPanel>
 
-              <TabPanel>
-                {backendData.length > 0 && backendData.map((backend, i) => (
-                  <div key={backend.id} className="mt-4">
-                    <Flex className="mt-4">
-                      <Text className="w-full"> {backend.name}</Text>
-                      <Flex className="space-x-2" justifyContent="end">
-                        <Text>{backend.nivel}%</Text>
+                <TabPanel>
+                  {backendData.length > 0 && backendData.map((backend, i) => (
+                    <div key={backend.id} className="mt-4">
+                      <Flex className="mt-4">
+                        <Subtitle className="w-full dark:text-white"> {backend.name}</Subtitle>
+                        <Flex className="space-x-2" justifyContent="end">
+                          <Text>{backend.nivel}%</Text>
+                        </Flex>
                       </Flex>
-                    </Flex>
-                    <ProgressBar value={backend.nivel} className="mt-2" />
-                  </div>
-                ))}
+                      <ProgressBar value={backend.nivel} color="fuchsia"  className="mt-2" />
+                    </div>
+                  ))}
 
-                
-              </TabPanel>
 
-              <TabPanel>
-                {otrosData.length > 0 && otrosData.map((otros, i) => (
-                  <div key={otros.id} className="mt-4">
-                    <Flex className="mt-4">
-                      <Text className="w-full"> {otros.name}</Text>
-                      <Flex className="space-x-2" justifyContent="end">
-                        <Text>{otros.nivel}%</Text>
+                </TabPanel>
+
+                <TabPanel>
+                  {otrosData.length > 0 && otrosData.map((otros, i) => (
+                    <div key={otros.id} className="mt-4">
+                      <Flex className="mt-4">
+                        <Subtitle className="w-full dark:text-white"> {otros.name}</Subtitle>
+                        <Flex className="space-x-2" justifyContent="end">
+                          <Text>{otros.nivel}%</Text>
+                        </Flex>
                       </Flex>
-                    </Flex>
-                    <ProgressBar value={otros.nivel} className="mt-2" />
-                    <Flex className="space-x-2" justifyContent="end">
+                      <ProgressBar value={otros.nivel} color="fuchsia"  className="mt-2" />
+                      <Flex className="space-x-2" justifyContent="end">
                         <Text>{otros.detalle}</Text>
                       </Flex>
-                  </div>
-                ))}
-
-                
-              </TabPanel>
+                    </div>
+                  ))}
 
 
-            </TabPanels>
-          </TabGroup>
+                </TabPanel>
+
+
+              </TabPanels>
+            </TabGroup>
+          </Card>
         </div>
       </div>
     </div>

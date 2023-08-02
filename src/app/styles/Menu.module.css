@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Niconne&display=swap');
+
+
 .container {
   user-select: none;
   height: 60px;
@@ -61,7 +64,7 @@
 
 .icon {
   font-size: 30px;
-  margin-left: 10px;
+  margin: 0 10px 0 10px;
   color: var(--color-text-ligth);
 }
 
@@ -73,6 +76,8 @@
   width: 25%;
   display: none;
   margin-left: 0px;
+  font-family: 'Niconne', cursive;
+  font-size: 2rem;
 }
 
 .menuLink:hover {

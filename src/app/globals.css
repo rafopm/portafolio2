@@ -18,7 +18,7 @@ body{
   font-family: "Raleway", sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  background-color: var(--color-background-ligth);
+  background-color: var(--color-cuarty);
   color: var(--color-text-dark);
 }
 
@@ -29,7 +29,7 @@ body{
 }
 
 .light body {
-  background-color: var(--color-background-light);
+  background-color: var(--color-cuarty);
   color: var(--color-text-dark);
   --color-primary: var(var(--color-tertiary));
 }
