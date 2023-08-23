@@ -1,4 +1,4 @@
-'use client'
+
 import { Card } from '@tremor/react';
 import { FaHandPointRight } from "react-icons/fa";
 import Styles from './styles/Home.module.css'
@@ -7,10 +7,16 @@ import TextoAnimado from './components/TextoAnimado';
 import { Redes } from './components/Redes';
 import Trail from './components/TrailSpringTexto';
 
+export const metadata = {
+  title: 'Rafael Pampavilca - Programador web - Home',
+  description: 'Portafolio para que me conozcan mis intereses y habilidades.',
+}
+
 export default function Home() {
 
   return (
     <div className={Styles.container}>
+      
       <div className={Styles.elementos}>
         <div className={Styles.social}>
 
@@ -49,7 +55,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div
+        {/* <div
           className={[
             "bg-cover bg-center absolute inset-0 bg-opacity-50",
           ]}
@@ -57,7 +63,7 @@ export default function Home() {
             backgroundImage: `url(/images/bk-mov.jpg)`,
             zIndex: -1,
           }}
-        ></div>
+        ></div> */}
       </div>
     </div>
   );

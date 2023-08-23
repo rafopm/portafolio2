@@ -1,4 +1,4 @@
-
+'use client'
 import { useTrail, animated } from '@react-spring/web';
 import { useEffect, useState } from 'react';
 import Styles from '../styles/TrailSpringTexto.module.css'

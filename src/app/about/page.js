@@ -1,11 +1,15 @@
-'use client'
-import { Card, Divider, Metric, Subtitle, Text, Title } from "@tremor/react"
-import Image from "next/image"
+
+import { Card, Divider, Metric, Title } from "@tremor/react"
 import Styles from '../styles/About.module.css'
 import { BsEmojiSmile, BsFillPersonFill } from "react-icons/bs";
 import Trail from "../components/TrailSpringTexto";
-import { useEffect, useState } from "react";
 
+
+
+export const metadata = {
+  title: 'Rafael Pampavilca - Programador web - Sobre Mi',
+  description: 'Un poco de mi para que me conozcan como persona.',
+}
 
 export default function About() {
 

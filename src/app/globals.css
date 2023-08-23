@@ -72,6 +72,9 @@ input[type="text"], input[type="email"], input[type="password"] {
   color: var(--color-text-dark);
 }
 
+.backgroundImage {
+  background-image: url('/images/bk-mov.jpg');
+}
 
 @media (prefers-color-scheme: dark) {
   html {
