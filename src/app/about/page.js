@@ -20,8 +20,8 @@ export default function About() {
     <div className={Styles.container}>
 
       <div className={Styles.texto}>
-        <div className={Styles.titulo}><Metric className="dark:text-color-tertiary">Sobre mi</Metric>
-          <BsFillPersonFill className="text-4xl dark:text-color-tertiary" />
+        <div className={Styles.titulo}><Metric className="dark:text-tertiary text-tertiary  ">Sobre mi</Metric>
+          <BsFillPersonFill className="text-4xl dark:text-tertiary text-tertiary" />
         </div>
       </div>
       <Divider className="mt-2 mb-3" />

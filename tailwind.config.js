@@ -11,14 +11,15 @@ module.exports = {
     current: "currentColor",
     extend: {
       colors: {
-        "color-text-dark": "#231454",
-        "color-background-ligth": "#E6ECFF",
-        "color-text-ligth": "#F9F6FF",
-        "color-background-dark": "#231454",
-        "color-primary": "#8A6AE6",
-        "color-secondary": "#D16AE6", 
-        "color-tertiary": "#C9E265",
-        "color-cuarty":"#DBE4B8",
+        "color-text-dark": "var(--color-text-dark)",
+        "color-background-ligth": "var(--color-background-ligth)",
+        "color-text-ligth": "var(--color-text-ligth)",
+        "color-background-dark": "var(--color-background-dark)",
+        "color-primary": "var(--color-primary)",
+        "color-secondary": "var(--color-secondary)", 
+        "color-tertiary": "var(--color-tertiary)",
+        "color-cuarty":"var(--color-cuarty)",
+
         // light mode
         tremor: {
           brand: {
@@ -79,6 +80,16 @@ module.exports = {
             inverted: "#000000", // black
           },
         },
+      },
+      textColor: {
+        "dark": "var(--color-text-dark)",
+        "ligth": "var(--color-background-ligth)",
+        "ligthone": "var(--color-text-ligth)",
+        "darkone": "var(--color-background-dark)",
+        "primary": "var(--color-primary)",
+        "secondary": "var(--color-secondary)", 
+        "tertiary": "var(--color-tertiary)",
+        "cuarty":"var(--color-cuarty)",
       },
       boxShadow: {
         // light

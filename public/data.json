@@ -77,7 +77,20 @@
       },
       {
         "id": 6,
-        "name": "Node",
+        "name": "NodeJS",
+        "nivel": 30,
+        "detalle": ""
+      },
+      {
+        "id": 7,
+        "name": "Oracle Database JSON",
+        "nivel": 40,
+        "detalle": ""
+      }
+      ,
+      {
+        "id": 8,
+        "name": "Express",
         "nivel": 30,
         "detalle": ""
       }

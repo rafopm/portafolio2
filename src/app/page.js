@@ -20,22 +20,22 @@ export default function Home() {
       <div className={Styles.elementos}>
         <div className={Styles.social}>
 
-          <Redes color="text-color-tertiary" />
+          <Redes color="text-tertiary" />
 
         </div>
         <div className={Styles.cards}>
 
           <div className={Styles.card}>
-            <Card className={`max-w-md mx-auto opacity-75 ${Styles['cardHover']}`}>
+            <Card className={`max-w-md mx-auto opacity-90 ${Styles['cardHover']}`}>
               <Trail>
-                <p className="font-bold text-2xl text-color-secondary  ">Hola, soy</p>
-                <p className="font-bold text-3xl dark:text-color-tertiary ">Rafael Pampavilca</p>
-                <p className="font-bold text-2xl text-color-secondary ">Programador web</p>
+                <p className="font-bold text-2xl text-secondary  ">Hola, soy</p>
+                <p className="font-bold text-3xl dark:text-tertiary ">Rafael Pampavilca</p>
+                <p className="font-bold text-2xl text-secondary ">Programador web</p>
               </Trail>
 
               <div className="flex justify-end ">
                 <Link href="/contactos" passHref>
-                  <button className=" border-2 mt-4 text-lg dark:text-color-text-dark bg-color-tertiary flex flex-row items-center font-semibold py-2 px-4 border border-gray-900 rounded shadow">
+                  <button className=" border-2 mt-4 text-lg dark:text-dark bg-color-tertiary flex flex-row items-center font-semibold py-2 px-4 border border-gray-900 rounded shadow">
                     <FaHandPointRight className="mr-4 text-2xl " />Contáctame
                   </button>
                 </Link >

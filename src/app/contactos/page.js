@@ -60,8 +60,8 @@ export default function Contactos() {
     <div className={Styles.container}>
       <div className={Styles.head}>
 
-        <div className={Styles.titulo}><Metric className="dark:text-color-tertiary">Contactos</Metric>
-          <AiFillContacts className="text-4xl dark:text-color-tertiary" />
+        <div className={Styles.titulo}><Metric className="dark:text-tertiary text-tertiary">Contactos</Metric>
+          <AiFillContacts className="text-4xl dark:text-tertiary text-tertiary" />
         </div>
       </div>
       <div >
@@ -75,7 +75,7 @@ export default function Contactos() {
             <div className="w-full  max-w-md mx-450 rounded-lg pt-0  p-8 mt-1">
               <div className="flex flex-row mb-4  ">
                 <Trail >
-                  <Metric className="mr-5 dark:text-color-secondary">¡Contáctame! </Metric>
+                  <Metric className="mr-5 dark:text-secondary">¡Contáctame! </Metric>
                 </Trail>
                 <Trail >
 
@@ -86,7 +86,7 @@ export default function Contactos() {
               ) : (
                 <form ref={form} onSubmit={sendEmail}>
                   <div className="mb-4">
-                    <label className="block text-gray-700 text-sm font-bold mb-2 dark:text-color-text-ligth" htmlFor="Nombre">
+                    <label className="block text-gray-700 text-sm font-bold mb-2 dark:text-ligth" htmlFor="Nombre">
                       Name
                     </label>
                     <input
@@ -98,7 +98,7 @@ export default function Contactos() {
                     />
                   </div>
                   <div className="mb-4">
-                    <label className="block text-gray-700 text-sm font-bold mb-2 dark:text-color-text-ligth" htmlFor="Email">
+                    <label className="block text-gray-700 text-sm font-bold mb-2 dark:text-ligth" htmlFor="Email">
                       Email
                     </label>
                     <input
@@ -111,7 +111,7 @@ export default function Contactos() {
                     />
                   </div>
                   <div className="mb-4">
-                    <label className="block text-gray-700 text-sm font-bold mb-2 dark:text-color-text-ligth" htmlFor="Mensaje">
+                    <label className="block text-gray-700 text-sm font-bold mb-2 dark:text-ligth" htmlFor="Mensaje">
                       Mensaje
                     </label>
                     <textarea
@@ -139,7 +139,7 @@ export default function Contactos() {
               <Card className={`${Styles.card} max-w-xs mx-auto h-25`} decoration="top" decorationColor="indigo">
                 <Metric>Redes</Metric>
                 <Divider />
-                <Redes color="text-color-primary" />
+                <Redes color="text-primary" />
               </Card>
               <Card className="max-w-xs mx-auto " decoration="top" decorationColor="indigo">
                 <Metric>Email</Metric>

@@ -37,8 +37,8 @@ export default function Projects() {
     <div className={Styles.container}>
       <div className={Styles.head}>
         <div>
-          <div className={Styles.titulo}><Metric className="dark:text-color-tertiary">Proyectos</Metric>
-            <AiFillProject className="text-4xl dark:text-color-tertiary" />
+          <div className={Styles.titulo}><Metric className="dark:text-tertiary text-tertiary">Proyectos</Metric>
+            <AiFillProject className="text-4xl dark:text-tertiary text-tertiary" />
           </div>
         </div>
       </div>
@@ -52,7 +52,7 @@ export default function Projects() {
               
                 <Card key={project.id} className={`dark:bg-color-text-dark   ${Styles.card}`} >
                   <div className={Styles.cardData}>
-                    <Text className="dark:text-color-secondary ">{project.category}</Text>
+                    <Text className="dark:text-secondary ">{project.category}</Text>
                     <Metric>{project.title}</Metric>
                     <Callout className="mt-4" title={`Tools: ${project.tools}`} color="teal">
                       {project.description}
