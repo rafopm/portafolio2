@@ -138,6 +138,24 @@
     ],
     "projects" : [
       {
+        "id": 3,
+        "title": "Paqariy",
+        "description": "Aplicación desplegada en Oracle Cloud Infraestructure, sobre 2 instancias y un balanceador. Apicación permite registro de usuarios, publicar y dar me gusta",
+        "demo": "https://paqariy.netlify.app/",
+        "category": "Full Stack",
+        "tools": "NextJS (React), NodeJS, Express, Oracle JSON Database,",
+        "repositorio":"https://github.com/rafopm"
+      },
+      {
+        "id": 4,
+        "title": "QR code component",
+        "description": "Solucion de Challenge sobre creacion de una card.",
+        "demo": "https://rafopm.github.io/qr-code-component/",
+        "category": "Frontend",
+        "tools": "HTML5, CSS",
+        "repositorio":"https://github.com/rafopm/qr-code-component"
+      },
+      {
         "id": 5,
         "title": "Foro",
         "description": "Creación de Api Rest con Java + Spring, con seguridad token para acceso a datos, para el fronted se uso NextJS (React), CSS y HTML5. El deploy se realizó en Azure",
