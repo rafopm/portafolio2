@@ -48,8 +48,8 @@ export default function Tools() {
   return (
     <div className={Styles.container}>
       <div className={Styles.tabs}>
-        <div><div className={Styles.titulo}><Metric className="dark:text-tertiary text-tertiary">SKills</Metric>
-          <BsTools className="text-4xl dark:text-tertiary text-tertiary" />
+        <div><div className={Styles.titulo}><Metric className="dark:text-tertiary ">SKills</Metric>
+          <BsTools className="text-4xl dark:text-tertiary " />
         </div>
 
           <Divider className="mt-2 mb-3" />

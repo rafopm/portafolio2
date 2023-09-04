@@ -1,0 +1,12 @@
+/* Estilos CSS en un archivo CSS o en el componente */
+.background-image {
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .background-image.show {
+    opacity: 1;
+  }
+  

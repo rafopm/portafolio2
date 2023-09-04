@@ -6,7 +6,8 @@ function TextoAnimado({ text, children }) {
   return (
     <div className={Styles.spinningWrapper}>
       <div className={Styles.spinningText}>
-        <p>
+        <p
+        className="dark:text-tertiary text-dark">
           {text.split("").map((letra, i) => (
             <span
               key={i}

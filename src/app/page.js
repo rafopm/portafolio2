@@ -18,9 +18,9 @@ export default function Home() {
     <div className={Styles.container}>
       
       <div className={Styles.elementos}>
-        <div className={Styles.social}>
+        <div className={ Styles.social}>
 
-          <Redes color="text-tertiary" />
+          <Redes />
 
         </div>
         <div className={Styles.cards}>
@@ -28,7 +28,7 @@ export default function Home() {
           <div className={Styles.card}>
             <Card className={`max-w-md mx-auto opacity-90 ${Styles['cardHover']}`}>
               <Trail>
-                <p className="font-bold text-2xl text-secondary  ">Hola, soy</p>
+                <p className="font-bold text-2xl text-secondary ">Hola, soy</p>
                 <p className="font-bold text-3xl dark:text-tertiary ">Rafael Pampavilca</p>
                 <p className="font-bold text-2xl text-secondary ">Programador web</p>
               </Trail>

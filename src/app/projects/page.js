@@ -37,8 +37,8 @@ export default function Projects() {
     <div className={Styles.container}>
       <div className={Styles.head}>
         <div>
-          <div className={Styles.titulo}><Metric className="dark:text-tertiary text-tertiary">Proyectos</Metric>
-            <AiFillProject className="text-4xl dark:text-tertiary text-tertiary" />
+          <div className={Styles.titulo}><Metric className="dark:text-tertiary ">Proyectos</Metric>
+            <AiFillProject className="text-4xl dark:text-tertiary " />
           </div>
         </div>
       </div>

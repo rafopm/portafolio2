@@ -60,8 +60,8 @@ export default function Contactos() {
     <div className={Styles.container}>
       <div className={Styles.head}>
 
-        <div className={Styles.titulo}><Metric className="dark:text-tertiary text-tertiary">Contactos</Metric>
-          <AiFillContacts className="text-4xl dark:text-tertiary text-tertiary" />
+        <div className={Styles.titulo}><Metric className="dark:text-tertiary ">Contactos</Metric>
+          <AiFillContacts className="text-4xl dark:text-tertiary" />
         </div>
       </div>
       <div >
