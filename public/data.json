@@ -138,6 +138,15 @@
     ],
     "projects" : [
       {
+        "id": 1,
+        "title": "Lista de tareas",
+        "description": "El usuario puede agregar tareas y marcarlas como completadas, también puede filtrar según su estado y eliminarlas. Tiene opción de cambiar de tema",
+        "demo": "https://todolist-darkmode.netlify.app/",
+        "category": "Frontend",
+        "tools": "NextJS (React), CSS",
+        "repositorio":"https://github.com/rafopm/todo-list"
+      },
+      {
         "id": 2,
         "title": "Formulario de suscripción",
         "description": "El usuario agrega su correo electrónico y envía el formulario. El usuario puede ver un mensaje de envío exitoso. Validación de formulario",
