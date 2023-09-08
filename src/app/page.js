@@ -8,10 +8,7 @@ import { Redes } from './components/Redes';
 import Trail from './components/TrailSpringTexto';
 import { useSpring, animated } from '@react-spring/web';
 
-export const metadata = {
-  title: 'Rafael Pampavilca - Programador web - Home',
-  description: 'Portafolio para que me conozcan mis intereses y habilidades.',
-}
+
 
 export default function Home() {
   const cardSpring = useSpring({

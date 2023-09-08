@@ -45,7 +45,7 @@ export default function Contactos() {
 
     emailjs.sendForm(SERVICEID, TEMPLATEID, form.current, PUBLICKEYID)
       .then((result) => {
-        console.log(result.text);
+       
         setSuccessMessage('Mensaje enviado correctamente.');
         form.current.reset();
         setIsFormDisabled(false);
