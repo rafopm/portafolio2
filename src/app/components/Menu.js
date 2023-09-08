@@ -6,6 +6,7 @@ import { AiFillHome, AiFillProject, AiFillContacts } from "react-icons/ai";
 import { BsFillPersonFill, BsTools } from "react-icons/bs";
 import Styles from "../styles/Menu.module.css";
 import BtnTheme from "./BtnTheme";
+import { FiestaEffect } from "./FiestaEffect";
 
 const Menu = () => {
   const currentRoute = usePathname("/");
@@ -17,13 +18,18 @@ const Menu = () => {
   }
 
   return (
-    <nav className={Styles.container}>
+    <nav className={`${Styles.container} `}>
       <div className={Styles.menu}>
+
         <div className={`text-color-tertiary ${Styles.logoContainer}`}>
-          Rafopm
+          <FiestaEffect  >
+            <div className="mt-[150px] text-3xl " >Rafopm</div>
+            
+          </FiestaEffect>
         </div>
+
         <ul className={Styles.menuItems}>
- 
+
           <li>
             <Link
               className={`${currentRoute === "/" ? Styles.activeLink : Styles.menuLink}`}

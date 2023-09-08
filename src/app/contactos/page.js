@@ -7,6 +7,7 @@ import { Card, Divider, Metric, Text, Title } from '@tremor/react';
 import { AiFillContacts } from 'react-icons/ai';
 import { Redes } from '../components/Redes';
 import Trail from '../components/TrailSpringTexto';
+import { useSpring, animated } from '@react-spring/web';
 
 
 export default function Contactos() {
@@ -56,6 +57,20 @@ export default function Contactos() {
       });
   };
 
+  const cardSpring1 = useSpring({
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+    config: { duration: 500 }, // Duración de la animación en milisegundos (0.5 segundos)
+    delay: 1000, // Retraso de 500 milisegundos antes de que comience la animación
+  });
+
+  const cardSpring2 = useSpring({
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+    config: { duration: 500 }, // Duración de la animación en milisegundos (0.5 segundos)
+    delay: 2000, // Retraso de 500 milisegundos antes de que comience la animación
+  });
+
   return (
     <div className={Styles.container}>
       <div className={Styles.head}>
@@ -74,7 +89,7 @@ export default function Contactos() {
 
             <div className="w-full  max-w-md mx-450 rounded-lg pt-0  p-8 mt-1">
               <div className="flex flex-row mb-4  ">
-                <Trail >
+                <Trail posicionEjeX={-300} altoObjeto={35}>
                   <Metric className="mr-5 dark:text-secondary">¡Contáctame! </Metric>
                 </Trail>
                 <Trail >
@@ -136,22 +151,26 @@ export default function Contactos() {
             </div>
 
             <div className={Styles.cardsContainer}>
-              <Card className={`${Styles.card} max-w-xs mx-auto h-25`} decoration="top" decorationColor="indigo">
-                <Metric>Redes</Metric>
-                <Divider />
-                <Redes color="text-primary" />
-              </Card>
-              <Card className="max-w-xs mx-auto " decoration="top" decorationColor="indigo">
-                <Metric>Email</Metric>
-                <Divider />
-                <Title className='text-center'>rafopm@outlook.com</Title>
+              <animated.div style={cardSpring1} className=" w-full mt-10 mx-auto h-25">
+                <Card className={`${Styles.card} max-w-xs mx-auto h-25 hover:scale-110 hover:brightness-125 transition-transform duration-300 ease-in-out transform-gpu `} decoration="top" decorationColor="indigo">
+                  <Metric>Redes</Metric>
+                  <Divider />
+                  <Redes color="text-primary" />
+                </Card>
+              </animated.div>
+              <animated.div style={cardSpring2} className=" w-full mt-10 mx-auto h-25">
+                <Card className="max-w-xs mx-auto hover:scale-110 hover:brightness-125 transition-transform duration-300 ease-in-out transform-gpu" decoration="top" decorationColor="indigo">
+                  <Metric>Email</Metric>
+                  <Divider />
+                  <Title className='text-center'>rafopm@outlook.com</Title>
+                </Card>
+              </animated.div>
 
-              </Card>
             </div>
           </div>
         </Card>
-
-      </div>
-    </div>
+        
+      </div >
+    </div >
   );
 }

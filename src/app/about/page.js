@@ -30,10 +30,10 @@ export default function About() {
         <div className={Styles.parrafo}>
           <Card className="dark:bg-color-text-dark ">
             <div className="flex flex-row  ">
-              <Trail >
+            <Trail posicionEjeX={-300} altoObjeto={35}>
                 <Metric className="mr-5 dark:text-color-secondary">¡Hola! </Metric>
               </Trail>
-              <Trail >
+              <Trail posicionEjeX={500} altoObjeto={35}>
                 <BsEmojiSmile className="text-3xl dark:text-color-secondary" />
               </Trail>
             </div>

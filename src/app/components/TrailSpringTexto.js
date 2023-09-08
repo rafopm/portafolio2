@@ -3,7 +3,7 @@ import { useTrail, animated } from '@react-spring/web';
 import { useEffect, useState } from 'react';
 import Styles from '../styles/TrailSpringTexto.module.css'
 
-const Trail = ({ children }) => {
+const Trail = ({ children, posicionEjeX,altoObjeto }) => {
     const items = Array.isArray(children) ? children : [children];
     const [open, setOpen] = useState(true);
 
@@ -11,8 +11,8 @@ const Trail = ({ children }) => {
         config: { mass: 10, tension: 2000, friction: 200 },
         opacity: open ? 1 : 0,
         x: open ? 0 : 50,
-        height: open ? 110 : 0,
-        from: { opacity: 0, y:0 , x: 300, height: 0 },
+        height: open ? altoObjeto : 0,
+        from: { opacity: 0, y:0 , x: posicionEjeX, height: 0 },
     });
 
     useEffect(() => {

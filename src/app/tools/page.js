@@ -30,14 +30,13 @@ export default function Tools() {
   const [frontData, setFrontData] = useState([]);
   const [backendData, setBackendData] = useState([]);
   const [otrosData, setOtrosData] = useState([]);
-  console.log(frontData.front);
+ 
   const router = useRouter();
 
   useEffect(() => {
     fetch("data.json")
       .then(response => response.json())
       .then(data => {
-        console.log(data.front);
         setFrontData(data.front);
         setBackendData(data.backend);
         setOtrosData(data.otros);
@@ -60,18 +59,18 @@ export default function Tools() {
 
               <TabList className="mt-4 ">
                 <Tab className="" >
-                  <Trail>
+                  <Trail posicionEjeX={-300} altoObjeto={35}>
                     <FcSmartphoneTablet className=" text-2xl" />
                     <div className=" text-2xl "> Frontend</div>
                   </Trail>
                 </Tab>
                 <Tab >
-                  <Trail>
+                  <Trail posicionEjeX={-300} altoObjeto={35}>
                     <FcDataConfiguration className=" text-2xl" /><div className=" text-2xl">Backend</div>
                   </Trail>
                 </Tab>
                 <Tab >
-                  <Trail>
+                  <Trail posicionEjeX={-300} altoObjeto={35}>
                     <RxMix className=" text-2xl" /><div className="text-2xl">Otros</div>
                   </Trail>
                 </Tab>

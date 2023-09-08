@@ -1,7 +1,8 @@
 .trailsText {
     position: relative;
     width: 100%;
-    height: 40px;
+    
+    margin: 5px;
     will-change: transform, opacity;
     overflow: hidden;
   }

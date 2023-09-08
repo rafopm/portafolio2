@@ -1,0 +1,35 @@
+.card {
+    width: 200px;
+    height: 200px;
+    background-color: #f0f0f0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Estilo de las estrellas o papelitos */
+.confetti {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background-color: #f00; /* Color de las estrellas o papelitos */
+    opacity: 0;
+    border-radius: 50%;
+    animation: confettiAnimation 1s ease-in-out infinite;
+}
+
+/* Animación de las estrellas o papelitos */
+@keyframes confettiAnimation {
+    0% {
+        transform: translateY(0) rotate(0);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(-200px) rotate(360deg);
+        opacity: 1;
+    }
+}
+
+/* Efecto hover para mostrar las estrellas o papelitos */
+.card:hover .confetti {
+    opacity: 1;
+}

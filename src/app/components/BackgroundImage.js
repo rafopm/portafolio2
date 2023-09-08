@@ -1,36 +1,28 @@
 'use client'
 import { useTheme } from 'next-themes';
 import React, { useEffect, useState } from 'react';
-import styles from '../styles/BackgroundImage.module.css'; 
+import Styles from '../styles/BackgroundImage.module.css'
 
 export const BackgroundImage = () => {
-    // const { theme } = useTheme();
+    const { theme } = useTheme();
+    const [imgBackground, setImgBackground] = useState(""); 
+    const [isImageLoaded, setImageLoaded] = useState(false);
 
-    // const backgroundImageDark = "/images/bk-mov.jpg";
-    // const backgroundImageLight = "/images/bk-white.jpg";
-
-    // const backgroundImage = theme === ("dark") ? backgroundImageDark : backgroundImageLight;
-
-    // const [showImage, setShowImage] = useState(false);
-
-    // useEffect(() => {
-    //     const timeout = setTimeout(() => {
-    //         setShowImage(true);
-    //     }, 200);
-
-    //     return () => clearTimeout(timeout);
-    // }, []);
+    useEffect(() => {
+        if (theme === 'dark') {
+            setImgBackground("/images/bk-mov.jpg"); // Actualizar el valor para el tema oscuro
+        } else {
+            setImgBackground("/images/bk-white.jpg"); // Actualizar el valor para el modo claro
+        }
+        setTimeout(() => {
+            setImageLoaded(true);
+        }, 2000); // Puedes ajustar el tiempo según tus necesidades
+    }, [theme]);
 
     return (
         <div
-            className={[
-                "bg-cover bg-center absolute inset-0 bg-opacity-50",
-            ]}
-
-            style={{
-                backgroundImage: `url(/images/bk-mov.jpg)`, 
-                zIndex: -1,
-            }}
+            className={`${Styles['bkImage']} ${isImageLoaded ? Styles['imageLoaded'] : ''}`}
+            style={{ backgroundImage: `url(${imgBackground})` }}
         ></div>
     );
-}
+};
