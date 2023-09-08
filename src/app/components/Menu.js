@@ -105,7 +105,7 @@ const Menu = () => {
         </ul>
         <hr></hr>
         <div className={Styles.darkModeButton}>
-          <BtnTheme />
+          
         </div>
       </div>
     </nav>

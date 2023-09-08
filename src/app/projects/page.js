@@ -129,7 +129,7 @@ export default function Projects() {
                   >
                     {/* Agregar un elemento visual o texto indicando que se puede hacer clic en la imagen */}
                     <div className={Styles.clickOverlay}>Haz clic para ampliar</div>
-                    <img src={`/images/projects/${project.id}.png`} alt={project.title} />
+                    <img src={`/images/projects/${project.id}.png`} alt={project.title} loading="lazy" />
                   </div>
                 </Card>
               </animated.div>

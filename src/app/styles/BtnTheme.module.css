@@ -1,0 +1,27 @@
+.darkModeButtonTop {
+  position: fixed;
+  right: 50px;
+  top: 10px;
+
+  z-index: 100;
+  display: block;
+}
+
+.darkModeButtonBottom {
+  display: none;
+}
+
+@media screen and (max-width: 1025px) {
+  .darkModeButtonTop {
+    display: none;
+  }
+
+  .darkModeButtonBottom {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+
+    z-index: 102;
+    display: block;
+  }
+}

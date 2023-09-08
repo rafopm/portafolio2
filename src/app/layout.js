@@ -3,7 +3,7 @@ import { Raleway } from 'next/font/google'
 import Providers from './providers'
 import Menu from './components/Menu'
 import { BackgroundImage } from './components/BackgroundImage'
-
+import BtnTheme from './components/BtnTheme'
 
 const rale = Raleway({ subsets: ['latin'] })
 
@@ -18,22 +18,23 @@ export default function RootLayout({ children }) {
     <html lang="es">
       <body className={rale.className}>
         <Providers>
-        
-          {/* Header */}
-          <header >
-            <Menu />
-          </header>
-          {/* Page */}
-          <main>
+        <BtnTheme />
+            {/* Header */}
+            <header >
+              <Menu />
+            </header>
+            {/* Page */}
+            <main>
 
 
-            {children}
+              {children}
 
 
-          </main>
-          <BackgroundImage />
-          {/* Footer */}
-          <footer></footer>
+            </main>
+            <BackgroundImage />
+            {/* Footer */}
+            <footer></footer>
+         
         </Providers>
       </body>
     </html>
