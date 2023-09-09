@@ -4,8 +4,7 @@ import { usePathname } from 'next/navigation';
 import { useEffect } from "react";
 import { AiFillHome, AiFillProject, AiFillContacts } from "react-icons/ai";
 import { BsFillPersonFill, BsTools } from "react-icons/bs";
-import Styles from "../styles/Menu.module.css";
-import BtnTheme from "./BtnTheme";
+import Styles from '../styles/Menu.module.css'
 import { FiestaEffect } from "./FiestaEffect";
 
 const Menu = () => {

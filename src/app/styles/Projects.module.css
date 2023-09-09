@@ -79,7 +79,7 @@
     border-radius: 5px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 1);
 }
-
+ 
 .clickOverlay {
     position: absolute;
     top: 85%;
@@ -101,23 +101,29 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    font-weight: 700;
-    gap: 20px;
+    font-weight: 400;
+    gap: 5px;
     margin-top: 30px;
     margin-bottom: 20px;
     width: 100%;
     border-bottom: solid;
     padding-bottom: -10px;
+    align-items: center;
+    color: var(--color-text-dark);
 }
 
-.filterButton{
+.dark .filterButtons{
+    color: var(--color-text-ligth);
+}
 
+.dark .filterButton{
+    color: var(--color-text-ligth);
 }
 
 .activeFilter {
     color: var(--color-tertiary);
     background-color: var(--color-text-dark) ; 
-    padding: 10px 10px 3px 10px;
+    padding: 10px 5px 10px 10px;
     border-radius: 8px 8px 0 0;
   }
 
@@ -134,4 +140,26 @@
     .cardsContainer {
         justify-content: space-between;
     }
+
+
+    .filterButtons{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        font-weight: 700;
+        gap: 20px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        width: 100%;
+        border-bottom: solid;
+        padding-bottom: -10px;
+    }
+
+    .activeFilter {
+        color: var(--color-tertiary);
+        background-color: var(--color-text-dark) ; 
+        padding: 10px 10px 3px 10px;
+        border-radius: 8px 8px 0 0;
+      }
+
 }

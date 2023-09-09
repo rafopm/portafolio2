@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { ThemeProvider, useTheme } from 'next-themes'
+import {  useTheme } from 'next-themes'
 import { BiSolidMoon, BiSolidSun } from 'react-icons/bi';
 import Styles from '../styles/BtnTheme.module.css'
 

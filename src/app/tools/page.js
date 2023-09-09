@@ -61,17 +61,17 @@ export default function Tools() {
                 <Tab className="" >
                   <Trail posicionEjeX={-300} altoObjeto={35}>
                     <FcSmartphoneTablet className=" text-2xl" />
-                    <div className=" text-2xl "> Frontend</div>
+                    <div className=" text-base sm:text-lg md:text-xl lg:text-2xl "> Frontend</div>
                   </Trail>
                 </Tab>
                 <Tab >
                   <Trail posicionEjeX={-300} altoObjeto={35}>
-                    <FcDataConfiguration className=" text-2xl" /><div className=" text-2xl">Backend</div>
+                    <FcDataConfiguration className=" text-2xl" /><div className=" text-base sm:text-lg md:text-xl lg:text-2xl">Backend</div>
                   </Trail>
                 </Tab>
                 <Tab >
                   <Trail posicionEjeX={-300} altoObjeto={35}>
-                    <RxMix className=" text-2xl" /><div className="text-2xl">Otros</div>
+                    <RxMix className=" text-2xl" /><div className="text-base sm:text-lg md:text-xl lg:text-2xl">Otros</div>
                   </Trail>
                 </Tab>
               </TabList>

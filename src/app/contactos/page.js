@@ -152,7 +152,7 @@ export default function Contactos() {
 
             <div className={Styles.cardsContainer}>
               <animated.div style={cardSpring1} className=" w-full mt-10 mx-auto h-25">
-                <Card className={`${Styles.card} max-w-xs mx-auto h-25 hover:scale-110 hover:brightness-125 transition-transform duration-300 ease-in-out transform-gpu `} decoration="top" decorationColor="indigo">
+                <Card className={`${Styles.card} max-w-xs mx-auto h-25 hover:scale-110 hover:brightness-125   transition-transform duration-300 ease-in-out transform-gpu `} decoration="top" decorationColor="indigo">
                   <Metric>Redes</Metric>
                   <Divider />
                   <Redes color="text-primary" />

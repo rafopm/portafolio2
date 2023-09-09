@@ -36,7 +36,7 @@ export default function Home() {
             </animated.div>
             <Trail posicionEjeX={-300} altoObjeto={35}>
               <p className="font-bold text-2xl text-secondary ">Hola, soy</p>
-              <p className="font-bold text-3xl dark:text-tertiary ">Rafael Pampavilca</p>
+              <p className="font-bold text-3xl dark:text-tertiary  text-color-text-dark">Rafael Pampavilca</p>
               <p className="font-bold text-2xl text-secondary ">Programador web</p>
             </Trail>
 

@@ -63,9 +63,9 @@ export default function Projects() {
       <Divider className="mt-2 mb-3" />
       <div>
         <div className="m-2 ">
-          <div className={Styles.filterButtons}>
+          <div className={`${Styles.filterButtons} dark:text-white`}>
             <button
-              className={`${Styles.filterButton} ${selectedCategory === "TODOS" ? Styles.activeFilter : ""
+              className={`  ${Styles.filterButton} ${selectedCategory === "TODOS" ? Styles.activeFilter : ""
                 }`}
               onClick={() => handleCategoryChange("TODOS")}
             >
@@ -93,7 +93,7 @@ export default function Projects() {
               FULL STACK
             </button>
           </div>
-
+ 
 
           <div className={Styles.cardsContainer}>
 
