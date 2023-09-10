@@ -43,7 +43,7 @@ export default function Home() {
               <Link href="/contactos" passHref>
                 <Trail posicionEjeX={300} altoObjeto={60}>
                   <button className=" mt-4 mr-20 text-lg dark:text-dark bg-color-tertiary flex flex-row items-center font-semibold py-2 px-4 border border-gray-900 rounded shadow hover:scale-110 hover:brightness-20 transition-transform duration-300 ease-in-out transform-gpu">
-                    <FaHandPointRight className="mr-4 text-2xl " />Contáctame
+                    <FaHandPointRight className="mr-4 text-2xl " />Escríbeme
                   </button>
                 </Trail>
               </Link >
