@@ -18,9 +18,9 @@ export default function RootLayout({ children }) {
     <html lang="es">
       <body className={rale.className}>
         <Providers>
-          <BtnTheme />
+          {/* <BtnTheme /> */}
           <Menu />
-          <BackgroundImage />
+          {/* <BackgroundImage /> */}
           {children}
           
         </Providers>
