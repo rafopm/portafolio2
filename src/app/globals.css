@@ -12,7 +12,7 @@
   --color-tertiary: #C9E265;
   --color-cuarty:#DBE4B8;
 }
-
+/* 
 body{
   font-family: "Raleway", sans-serif;
   background-color: var(--color-text-ligth);
@@ -45,4 +45,4 @@ body svg{
   html {
     color-scheme: dark;
   }
-}
+} */

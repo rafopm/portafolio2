@@ -16,11 +16,11 @@ export const BackgroundImage = () => {
   }, []);
 
   return (
-    <ThemeProvider>
+
       <div
         className={`${Styles['bkImage']} ${isImageLoaded ? Styles['imageLoaded'] : ''}`}
         style={{ backgroundImage: `url(${imgBackground})` }}
       ></div>
-    </ThemeProvider>
+
   );
 };

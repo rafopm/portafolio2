@@ -20,8 +20,9 @@ export default function RootLayout({ children }) {
         <Providers>
           <BtnTheme />
           <Menu />
-          {children}
           <BackgroundImage />
+          {children}
+          
         </Providers>
       </body>
     </html>

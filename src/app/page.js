@@ -8,8 +8,6 @@ import { Redes } from './components/Redes';
 import Trail from './components/TrailSpringTexto';
 import { useSpring, animated } from '@react-spring/web';
 
-
-
 export default function Home() {
   const cardSpring = useSpring({
     from: { opacity: 0 },
@@ -39,7 +37,7 @@ export default function Home() {
               <p className="font-bold text-3xl dark:text-tertiary  text-color-text-dark">Rafael Pampavilca</p>
               <p className="font-bold text-2xl text-secondary ">Programador web</p>
             </Trail>
-
+ 
 
             <div className="flex justify-end ">
               <Link href="/contactos" passHref>
@@ -65,16 +63,6 @@ export default function Home() {
 
           </div>
         </div>
-
-        {/* <div
-          className={[
-            "bg-cover bg-center absolute inset-0 bg-opacity-50",
-          ]}
-          style={{
-            backgroundImage: `url(/images/bk-mov.jpg)`,
-            zIndex: -1,
-          }}
-        ></div> */}
       </div>
     </div>
   );

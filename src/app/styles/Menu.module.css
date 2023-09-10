@@ -25,12 +25,12 @@
   list-style: none;
   display: flex;
   justify-content: space-evenly;
-  font-size: 20px;
+  font-size: 15px;
   align-items: center;
   align-content: center;
   flex-wrap: wrap;
-  gap: 0px;
-  margin: 0 40px 0 10px;
+  gap: 3px;
+  margin: 0 10px 0 10px;
 }
 
 .menuLink {

@@ -24,7 +24,7 @@
 
 .card {
   max-width: 400px;
-  margin: 0 10px;
+  margin: 0 50px 0 0px;
   flex-grow: 1;
   flex-basis: 0;
 }
@@ -34,7 +34,7 @@
   height: 232px;
   width: 360px;
   margin-top: -15px;
-  margin-left: -15px;
+  margin-left: -35px;
 }
 
 .cardOcultar {

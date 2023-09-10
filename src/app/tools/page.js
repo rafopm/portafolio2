@@ -57,7 +57,7 @@ export default function Tools() {
           <Card className="dark:bg-color-text-dark ">
             <TabGroup>
 
-              <TabList className="mt-4 ">
+              <TabList className="mt-4 justify-end ">
                 <Tab className="" >
                   <Trail posicionEjeX={-300} altoObjeto={35}>
                     <FcSmartphoneTablet className=" text-2xl" />
@@ -90,7 +90,8 @@ export default function Tools() {
 
                         </Flex>
                       </Flex>
-                      <ProgressBar value={front.nivel} color="blue" className="mt-2" />
+   
+                      <ProgressBar value={front.nivel} color="fuchsia" className="mt-2" />
                     </div>
                   ))}
 
@@ -105,7 +106,7 @@ export default function Tools() {
                           <Text>{backend.nivel}%</Text>
                         </Flex>
                       </Flex>
-                      <ProgressBar value={backend.nivel} color="blue" className="mt-2" />
+                      <ProgressBar value={backend.nivel} color="fuchsia" className="mt-2" />
                     </div>
                   ))}
 
@@ -121,7 +122,7 @@ export default function Tools() {
                           <Text>{otros.nivel}%</Text>
                         </Flex>
                       </Flex>
-                      <ProgressBar value={otros.nivel} color="blue" className="mt-2" />
+                      <ProgressBar value={otros.nivel} color="fuchsia" className="mt-2" />
                       <Flex className="space-x-2" justifyContent="end">
                         <Text>{otros.detalle}</Text>
                       </Flex>
